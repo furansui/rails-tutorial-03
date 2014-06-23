@@ -19,4 +19,20 @@ describe "Static Pages" do
       expect(page).to have_content('About')
     end
   end
+
+  it "should have the right title" do
+    visit '/static_pages/home'
+    expect(page).to have_title("Home")
+  end
+
+  it "should have the right title" do
+    visit '/static_pages/help'
+    expect(page).to have_title("Help")
+  end
+
+  it "should have the right title" do
+    visit '/static_pages/about'
+    expect(page).to have_title("About")
+  end
+
 end
